@@ -97,7 +97,7 @@ public final class Main {
 			int state = STATE_NONE;
 
 			while ((line = reader.readLine()) != null) {
-				if (line.isEmpty()) continue;
+				if (line.isEmpty() || line.charAt(0) == '#') continue;
 
 				boolean indented = line.charAt(0) == ' ' || line.charAt(0) == '\t';
 				line = line.trim();
